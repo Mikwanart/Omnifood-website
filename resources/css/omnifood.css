@@ -1,0 +1,526 @@
+/*-----------------------------------*/
+/* BASIC SETUP */
+/*-----------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html,
+body{
+    background-color: white;
+    color: rgb(21, 19, 19);
+    font-family: 'lato','Arial','sans-serif';
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+.clearfix{zoom: 1;}
+.clearfix:after{
+    content: '.';
+    clear: both;
+    display: block;  /*clear fix clears floats,after using flots we need to clear them, clear fix class is added to thr container of the float elements*/
+    height: 0;
+    visibility:hidden ;
+}
+
+/*-----------------------------------*/
+/* REUSABLE COMPONENTS */
+/*-----------------------------------*/
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+section{
+    padding: 80px 0;
+}
+.box{
+    padding: 1%;
+}
+
+
+/*-----HEADINGS-----*/
+
+h1,h2,h3{
+    text-transform: uppercase;
+    
+}
+h1{
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 240%;
+    word-spacing: 5px ;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+}
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+
+}
+h2::after{
+    display: block;
+    height: 2px;
+    background-color: #2ecc71;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top:30px ;
+
+
+}
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.longcopy{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+}
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+.iconbig{
+    font-size: 200%;
+    display: block;
+    color: #2ecc71;
+    margin-bottom: 10px;
+    margin-left: 80px;
+}
+.features .longcopy{
+    margin-bottom: 35px;
+}
+
+
+
+     
+   
+/*-----BUTTONS-----*/    
+.btn:link,
+.btn:visited, 
+input[type=submit]{   
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-colour 0.2s, border 0.2s, color 0.2s;
+    transition: background-colour 0.2s, border 0.2s, color 0.2s;
+
+}
+.btnfull:link, 
+.btnfull:visited,
+input[type=submit]{
+    background-color: #2ecc71;
+    border: 1px solid #2ecc71;
+    margin-right: 15px;
+    color: white;
+    
+
+}
+.btnghost:link,
+.btnghost:visited{
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+
+
+}
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #25a25a;
+}
+.btnfull:hover,
+.btnfull:active,
+input[type= submit]:hover{
+    border: 1px solid #25a25a;
+    color: #25a25a; 
+    
+   
+    
+
+}
+.btnghost:hover,
+.btnghost:active{
+    border: 1px solid #25a25a;
+    color: white;
+
+} 
+/*-------------------------------*/
+/* HEADER */
+/*-------------------------------*/ 
+header{
+    background-image:-webkit-gradient(linear,left top, left bottom,from(rgba(27, 26, 26, 0.648)),to(rgba(27, 26, 26, 0.648)) ),url(imgs/hero.jpg);
+    background-image:linear-gradient(rgba(27, 26, 26, 0.648),rgba(27, 26, 26, 0.648) ),url(imgs/hero.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;  
+}
+.herotextbox{
+    position: absolute;
+    width: 1140px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50% , -50%);
+    transform: translate(-50% , -50%);
+} 
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+} 
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+
+} 
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px 0;
+    color: rgb(196, 195, 195);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 1px solid #2ecc71;  
+
+}
+/*-------------------------------*/
+/* MEALS*/
+/*-------------------------------*/
+.meals{
+    padding: 0;
+}
+.showcase{
+    list-style: none;
+    width: 100%;  
+}
+.showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+.mealphoto{
+    width:100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+.mealphoto img{
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s; opacity: 0.5s;
+}
+
+.mealphoto img:hover{
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+    opacity: 1;
+}
+/*-------------------------------*/
+/* HOW IT WORKS*/
+/*-------------------------------*/
+.sectionsteps{
+    background-color: rgb(225, 222, 222);
+}
+.stepsbox:first-child{
+  text-align: right;
+  padding-right: 3%; 
+  margin-top: 30px;
+   
+}
+.stepsbox:last-child{
+    padding-left: 3%; 
+    margin-top: 70px;
+    
+}
+.appscreen{
+    width:40% ;
+}
+.workstep{
+    margin-bottom: 40px;
+}
+.workstep:last-of-type{
+    margin-bottom: 80px;
+
+}
+.workstep div{
+    border: solid #2ecc71 2px;
+    border-radius: 50%;
+    color: #2ecc71;
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 150%;
+    font-weight: 300;
+    margin-right: 20px;
+    float: left;
+}
+.btnapp img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+/*-------------------------------*/
+/* CITIES*/
+/*-------------------------------*/
+.box img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.citiesfeature{
+    margin-bottom: 5px;
+}
+.iconsmall{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #2ecc71;
+    font-size: 120%;
+    line-height: 120%;
+    vertical-align: middle ;
+    margin-top: -5px;
+    margin-right: 10px;
+}
+.socials:link,
+.socials:visited{
+    text-decoration: none;
+    color: #2ecc71;
+    border-bottom: #2ecc71 solid 1px;
+    padding-bottom: 1px;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s
+
+}
+.socials:hover,
+.socials:active{
+    color: rgb(21, 19, 19) ;
+    border-bottom: 1px solid transparent;
+
+}
+/*-------------------------------*/
+/* CUSTOMERS*/
+/*-------------------------------*/
+
+.customers{
+    background-image:-webkit-gradient(linear,left top, left bottom,from(rgba(27, 26, 26, 0.648)),to(rgba(27, 26, 26, 0.648)) ), url(imgs/back-customers.jpg);
+    background-image:linear-gradient(rgba(27, 26, 26, 0.648),rgba(27, 26, 26, 0.648) ), url(imgs/back-customers.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+blockquote{
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 20px;
+}
+blockquote::before{
+    content: "\201C";
+    font-size: 500%  ;
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+}
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+   
+
+}
+cite img{
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+/*-------------------------------*/
+/* PLANS*/
+/*-------------------------------*/
+.plans{
+    background-color: rgb(225, 222, 222);
+
+}
+.planbox{
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 5%;
+    -webkit-box-shadow:0 2px 2px rgb(237, 235, 235) ;
+    box-shadow:0 2px 2px rgb(237, 235, 235) ;
+}
+.planbox div{
+    padding: 15px;
+    border-bottom: 1px solid rgb(237, 235, 235);
+}
+.planprice{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #2ecc71;
+}
+.pricepermonth{
+    font-size: 80%;
+
+}
+.planprice span{
+    font-size: 30%;
+    font-weight: 300;
+
+}
+.planbox ul{
+    list-style: none;
+
+}
+.planbox ul li{
+    padding: 5px 0;
+}
+.planbox div:last-child{
+    text-align:center ;
+    border-bottom: transparent;
+}
+.planbox div:first-child{
+    background-color: rgb(227, 243, 229);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/*-------------------------------*/
+/* FORM*/
+/*-------------------------------*/
+.form{
+    width: 60%;
+    margin: 30px auto 0 auto;
+}
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 7px;
+    border: 1px solid #2ecc71;
+}
+textarea{
+    height: 100px;
+}
+input[type=checkbox]{
+    margin: 10px 5px 10px 0;
+}
+*:focus{
+    outline: none;
+}
+/*-------------------------------*/
+/* FOOTER*/
+/*-------------------------------*/
+footer{
+    background-color: #2b2a2a;
+    padding: 50px;
+    font-size: 80%;
+}
+.footernav{
+    list-style: none;
+    float: left;
+}
+.sociallinks{
+    list-style: none;
+    float: right;
+}
+.footernav li,
+.sociallinks li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.footernav li:last-child,
+.sociallinks li:last-child{
+    margin-right: 0;
+}
+.footernav li a:link,
+.footernav li a:visited,
+.sociallinks li a:link,
+.sociallinks li a:visited{
+    text-decoration: none;
+    border: 0;
+    color: rgb(113, 112, 112);
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+    
+}
+.footernav li a:hover,
+.footernav li a:active{
+    color: white;
+}
+footer p{
+    color:rgb(113, 112, 112) ;
+    text-align: center;
+    margin-top: 10px;
+}
+.sociallinks li a:link,
+.sociallinks li a:visited{
+    font-size: 160%;
+}
+.f:hover{
+    color:  #3b5998;
+}
+.t:hover{
+    color:  #55acee;
+}
+.g:hover{
+    color: #0266C8;
+
+}
+.i:hover{
+    color:  #f9a539;
+}
+ion-icon {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+    
