@@ -16,30 +16,30 @@
         <!---------------HEADER--------------------->
         <!------------------------------------------>
         <header>
-            <nav class="sticky">
+            <nav>
                 <div class="row">
                     <img src="resources\img\logo-white.png" alt="logo" class="logo">
                     <img src="resources/img/logo.png" alt="logo-black" class="logo-black">
                     <ul class="main-nav">
-                        <li><a href="#">Food delivery</a></li>
-                        <li><a href="#">How it works</a></li>
-                        <li><a href="#">Our cities</a></li>
-                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#feature">Food delivery</a></li>
+                        <li><a href="#works">How it works</a></li>
+                        <li><a href="#city">Our cities</a></li>
+                        <li><a href="#plan">Sign up</a></li>
     
                     </ul>
                 </div>
-            </nav>
+            </nav> 
           <div class="herotextbox">
             <h1>Goodbye junk food. <br> Hello super healthy meals </h1>
-            <a class="btn btnfull" href="#">I’m hungry </a>
-            <a class="btn btnghost" href="#">Show me more </a>
+            <a class="btn btnfull js--btnfull" href="#">I’m hungry </a>
+            <a class="btn btnghost js--btnghost" href="#">Show me more </a>
           </div>    
         </header>
 
         <!------------------------------------------>
         <!---------------FEATURES SECTION----------->
         <!------------------------------------------>
-        <section class="features">
+        <section class="features js--features" id="feature">
             <div class="row">
                 <h2>Get food fast &mdash; not fast food</h2>
                 <p class="longcopy">
@@ -136,7 +136,7 @@
         <!------------------------------------------>
         <!----------HOW IT WORKS SECTION------------>
         <!------------------------------------------>
-        <section class="sectionsteps">
+        <section class="sectionsteps" id="works">
             <div class="row">
                 <h2>How it works &mdash; Simple as 1,2,3</h2>
             </div>
@@ -168,7 +168,7 @@
         <!------------------------------------------>
         <!-------------CITIES SECTION--------------->
         <!------------------------------------------>
-        <section class="cities">
+        <section class="cities" id="city">
             <div class="row">
                 <h2>We're currently in these cities</h2>
             </div>
@@ -283,7 +283,7 @@
         <!------------------------------------------>
         <!---------MEAL PLAN PRICE SECTION---------->
         <!------------------------------------------>
-        <section class="plans">
+        <section class="plans js--plans" id="plan">
             <div class="row">
                 <h2>Start eating healthy today</h2>
             </div>
@@ -463,7 +463,8 @@
         <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="vendors\js\script.js"></script>        
+        <script src="vendors\js\script.js"></script> 
+        <script src="vendors/js/jquery.waypoints.min.js"></script>       
         
         
     </body>

@@ -218,7 +218,7 @@ header{
 }
 .main-nav li a:hover,
 .main-nav li a:active{
-    border-bottom: 1px solid #2ecc71;  
+    border-bottom: 2px solid #2ecc71;  
 
 }
 
@@ -228,6 +228,7 @@ header{
     background-color: white;
     width: 100%;
     box-shadow: 0 1px 1px rgb(195, 194, 194) ;
+    z-index: 9999;
 }
 .sticky .main-nav {
     margin-top: 20px;
