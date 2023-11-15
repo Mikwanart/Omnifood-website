@@ -166,8 +166,9 @@ input[type= submit]:hover{
 /*-------------------------------*/ 
 header{
     background-image:-webkit-gradient(linear,left top, left bottom,from(rgba(27, 26, 26, 0.648)),to(rgba(27, 26, 26, 0.648)) ),url(imgs/hero.jpg);
-    background-image:linear-gradient(rgba(27, 26, 26, 0.648),rgba(27, 26, 26, 0.648) ),url(imgs/heress.jpg);
+    background-image:linear-gradient(rgba(27, 26, 26, 0.648),rgba(27, 26, 26, 0.648) ),url(imgs/plate.jpg);
     background-position: center;
+    background-size: contain;     /* fixes my zoomproblem */
     background-attachment: fixed;
     height: 100vh;  
 
