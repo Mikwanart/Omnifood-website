@@ -161,9 +161,9 @@ header {
       rgba(27, 26, 26, 0.648),
       rgba(27, 26, 26, 0.648)
     ),
-    url(imgs/pille-r-priske-U0PiIS4Uvkc-unsplash.jpg);
+    url(imgs/plate.jpg);
   background-position: center;
-  background-size: cover; /* fixes my zoomproblem */
+  background-size: contain; /* fixes my zoomproblem */
   background-attachment: fixed;
   height: 100vh;
 }
